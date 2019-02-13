@@ -173,4 +173,4 @@ client.on("message", async message => {
 // CODES - COPYRIGHT
 
 
-cclient.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
