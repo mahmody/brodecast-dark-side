@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "b!"
+var prefix = "!"
 
 
 
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("b!obc")) {
+    if (message.content.startsWith("!obc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "b!";
+  var prefix = "!";
 
   client.on("message", message => {
   
@@ -66,7 +66,7 @@ client.on('ready',  () => {
   client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('b!adminbc')){
+if (message.content.startsWith('!adminbc')){
 if(!message.author.id === '476185102922285066') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
@@ -79,7 +79,7 @@ m.sendMessage(args)
 
   
   client.on('message', msg => {
-    if(msg.content === 'b!help')
+    if(msg.content === '!help')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
@@ -93,19 +93,18 @@ m.sendMessage(args)
   
   
   client.on("message", message => {
-    if (message.content === "b!help") {
+    if (message.content === "!help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       b!obc | لأرسال برود كاست للكل
+       !obc | لأرسال برود كاست للكل
 
-       b!bc  |  لأرسال برود كاست للأونلاين
+       !bc  |  لأرسال برود كاست للأونلاين
 
-       b!invite | لدعوة البوت الي سيرفرك
-
-       b!support | سيرفر السبورت** `)
+     
+    
    message.author.sendEmbed(embed)
    
    }
@@ -138,7 +137,7 @@ m.sendMessage(args)
 
 
    client.on('message', message => {
-    if (message.content.startsWith("b!bot")) {
+    if (message.content.startsWith("!bot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
@@ -160,7 +159,7 @@ m.sendMessage(args)
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("b!help | b!invite",{type: 'WATCHING'});
+          client.user.setActivity("!help | Darkside♥",{type: 'WATCHING'});
   
   });
 
